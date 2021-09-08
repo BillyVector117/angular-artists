@@ -1,4 +1,14 @@
-# Client
+# ClientBranch #Angular #AngularMaterial #Bootstrap5 
+
+-> CHECK NOW DEMO VERSION! ""
+
+
+-> Main page preview
+![prev](https://github.com/BillyVector117/angular-artists/blob/main/preview1.png)
+-> Update artist preview
+![prev1](https://github.com/BillyVector117/angular-artists/blob/main/preview2.png)
+-> Create artist preview
+![prev3](https://github.com/BillyVector117/angular-artists/blob/main/preview3.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 
