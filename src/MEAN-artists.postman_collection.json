@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "88ccdb91-9489-4373-b41c-04225f12d0d3",
+		"name": "MEAN-artists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE Artist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicky\",\r\n    \"nickname\": \"NickyRomero\",\r\n    \"age\": 30,\r\n    \"nationality\": \"Swedish\",\r\n    \"gender\": \"House\",\r\n    \"picture\": \"https://es.wikipedia.org/wiki/Nicky_Romero#/media/Archivo:Nicky_Romero_at_Tomorrowland_2013.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/artists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"artists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Artist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicky\",\r\n    \"nickname\": \"NickyRomero\",\r\n    \"age\": 30,\r\n    \"nationality\": \"Swedish\",\r\n    \"gender\": \"House\",\r\n    \"picture\": \"https://es.wikipedia.org/wiki/Nicky_Romero#/media/Archivo:Nicky_Romero_at_Tomorrowland_2013.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/artists/6137ad4d7a0a3d75a095ca4e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"artists",
+						"6137ad4d7a0a3d75a095ca4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ ONE Artist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicky\",\r\n    \"nickname\": \"NickyRomero\",\r\n    \"age\": 30,\r\n    \"nationality\": \"Swedish\",\r\n    \"gender\": \"House\",\r\n    \"picture\": \"https://es.wikipedia.org/wiki/Nicky_Romero#/media/Archivo:Nicky_Romero_at_Tomorrowland_2013.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/artists/6137ad4d7a0a3d75a095ca4e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"artists",
+						"6137ad4d7a0a3d75a095ca4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ONE Artist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicky\",\r\n    \"nickname\": \"NickyRomero\",\r\n    \"age\": 30,\r\n    \"nationality\": \"Swedish\",\r\n    \"gender\": \"House\",\r\n    \"picture\": \"https://es.wikipedia.org/wiki/Nicky_Romero#/media/Archivo:Nicky_Romero_at_Tomorrowland_2013.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/artists/6137ad4d7a0a3d75a095ca4e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"artists",
+						"6137ad4d7a0a3d75a095ca4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "READ Artists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nicky\",\r\n    \"nickname\": \"NickyRomero\",\r\n    \"age\": 30,\r\n    \"nationality\": \"Swedish\",\r\n    \"gender\": \"House\",\r\n    \"picture\": \"https://es.wikipedia.org/wiki/Nicky_Romero#/media/Archivo:Nicky_Romero_at_Tomorrowland_2013.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/artists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"artists"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
