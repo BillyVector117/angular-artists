@@ -7,7 +7,7 @@ import { Character } from '../models/character';
   providedIn: 'root'
 })
 export class CharacterService {
-  url = 'http://localhost:4000/api/artists/';
+  url = 'https://ng-artists.herokuapp.com/api/artists/';
   constructor(private http: HttpClient) { }
   // The execution/subscription of fetch methods must be whithin used component
   getArtists(): Observable<any> {
