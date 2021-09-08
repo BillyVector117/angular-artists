@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background: #1e130c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #9a8478, #1e130c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #9a8478, #1e130c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title {
+    font-size: 3rem;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.card-body {
+    background-color: #f7f3f3;
+}
+
+.mat-form-field-empty.mat-form-field-label {
+    color: rgba(51, 51, 51, 0.315);
+}
+

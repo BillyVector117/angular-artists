@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="title">All characters</span>
+                    <button class="btn btn-success float-end " routerLink="/add-character">NEW</button>
+                    <table *ngIf="listArtists.length > 0" class="table table-striped mt-3">
+                        <thead>
+                            <th scope="col">Artist</th>
+                            <th scope="col">Nickname</th>
+                            <th scope="col">Nationality</th>
+                            <th scope="col">gender</th>
+                            <th scope="col">Age</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let artist of listArtists">
+                                <td>{{artist.name}} </td>
+                                <td>{{artist.nickname}} </td>
+                                <ng-container *ngFor="let nationality of artist.nationality | keyvalue">
+                                    
+                                    <td *ngIf="nationality.key === 'name' " > {{nationality.value}} </td>
+                                </ng-container>
+
+                                <td>{{artist.gender}} </td>
+                                <td>{{artist.age}} </td>
+                                <td>picture</td>
+                                <td>
+                                    <i [routerLink]="['/add-character/',artist._id] "
+                                        class="fas fa-edit text-secondary"></i>
+                                    <i (click)="deleteArtist(artist._id)" class="fas fa-trash text-danger"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5 style="text-align: start; margin-top: 10px;" *ngIf="listArtists.length === 0">We found nothing
+                    </h5>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
