@@ -3,6 +3,8 @@ const connectDB = require('./config/database');
 const cors = require('cors');
 const app = express()
 // This app is deployed at Heroku (billyrodriguezm@outlook.com)
+const PORT = process.env.PORT || 4000;
+
 // Database connection
 connectDB()
 app.use(cors())
@@ -13,6 +15,4 @@ app.use(express.json());
 app.use("/api/artists", require("./routes/artist"));
 
 // Listen server
-app.listen(4000, () => {
-    console.log("Server on PORT 4000")
-})
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
