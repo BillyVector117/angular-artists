@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "roles-book"
+  },
+  "targets": {
+    "roles-book": {
+      "hosting": {
+        "client": [
+          "roles-book"
+        ]
+      }
+    }
+  }
+}

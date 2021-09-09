@@ -54,8 +54,8 @@
                             </div>
                             <br>
                             <label>Picture: </label>
-                            <!-- (change)="onFileChange($event)" -->
-                            <input type="file" formControlName="picture" class="form-control" placeholder="">
+                            
+                            <input type="file" accept=".png, .jpg" (change)="onFileChange($event)" formControlName="picture" class="form-control" placeholder="">
                             <div class="mt-3">
                                 <button routerLink="/" mat-raised-button class="float-start">Back</button>
                                 <button type="submit" [disabled]="artistForm.invalid"

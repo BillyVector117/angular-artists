@@ -15,13 +15,18 @@ import { ButtonComponent } from './components/button/button.component';
 // 3rd Libraries
 import { ToastrModule } from 'ngx-toastr';
 import { MatButtonModule } from '@angular/material/button';
-
+// Firebase
+import { FirebaseAppModule, initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { } from "@angular/fire";
+import { provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { getFirestore } from '@firebase/firestore';
 @NgModule({
   declarations: [
     AppComponent,
     AddCharacterComponent,
     GetCharacterComponent,
-    ButtonComponent
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,12 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule, // Toastr library
     ToastrModule.forRoot(), // Message library
     MatButtonModule,
-    HttpClientModule // Allows to make Fetch request
+    HttpClientModule, // Allows to make Fetch request
+    // firebase
+    FirebaseAppModule,
+    provideFirebaseApp(() => initializeApp({})),
+    provideFirestore(() => getFirestore()),
+
   ],
   exports: [
     MatSelectCountryModule

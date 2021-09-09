@@ -85,9 +85,9 @@ export class AddCharacterComponent implements OnInit {
     }
 
   }
-  /* onFileChange(event: any) {
+  onFileChange(event: any) {
   console.log(event.target.files[0])
-  const reader = new FileReader();
+ /*  const reader = new FileReader();
 
   if (event.target.files && event.target.files.length) {
     const [file] = event.target.files;
@@ -103,8 +103,8 @@ export class AddCharacterComponent implements OnInit {
       this.changeDetector.markForCheck();
     };
     
-  }
-} */
+  } */
+}
   isEditForm() {
     // Examine Url-Params for ID, and set that values into the form
     if (this.id !== null) {

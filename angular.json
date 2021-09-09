@@ -9,7 +9,7 @@
         "@schematics/angular:application": {
           "strict": true
         }
-      }, 
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -107,6 +107,10 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

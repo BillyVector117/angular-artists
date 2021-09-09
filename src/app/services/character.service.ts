@@ -8,6 +8,7 @@ import { Character } from '../models/character';
 })
 export class CharacterService {
   url = 'https://ng-artists.herokuapp.com/api/artists/';
+  urlArtist = `https://theaudiodb.com/api/v1/json/1/search.php?s=`;
   constructor(private http: HttpClient) { }
   // The execution/subscription of fetch methods must be whithin used component
   getArtists(): Observable<any> {
@@ -26,6 +27,9 @@ export class CharacterService {
   // This method allows to handle update data
   updateArtist(id: string, artist: Character): Observable<any> {
     return this.http.put(this.url + id, artist)
+  }
+  getArtistPicture(artistName: string): Observable<any> {
+    return this.http.get(this.urlArtist + artistName)
   }
 }
 
