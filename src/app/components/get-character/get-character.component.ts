@@ -48,8 +48,13 @@ export class GetCharacterComponent implements OnInit {
         if (name == artist.nickname) {
           this.artistService.getArtistPicture(name).subscribe((data) => {
             console.log("fetching data for ", artist, data.artists[0])
-            artist.picture = data.artists[0].strArtistThumb
-          }, error => { console.log(error)})
+            if (artist.picture) {
+              return
+            } else {
+              artist.picture = data.artists[0].strArtistThumb
+
+            }
+          }, error => { console.log(error) })
           artist.picture
         }
       })
@@ -58,11 +63,11 @@ export class GetCharacterComponent implements OnInit {
 
       }
     })
-  /*   artistNames.forEach((artist) => {
-      this.artistService.getArtistPicture(artist).subscribe((data) => {
-        console.log("fetching data for ", artist, data.artists)
-
-      })
-    }) */
+    /*   artistNames.forEach((artist) => {
+        this.artistService.getArtistPicture(artist).subscribe((data) => {
+          console.log("fetching data for ", artist, data.artists)
+  
+        })
+      }) */
   }
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule } from '@angular/router';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
 import { HttpClientModule } from '@angular/common/http';
@@ -16,11 +16,12 @@ import { ButtonComponent } from './components/button/button.component';
 import { ToastrModule } from 'ngx-toastr';
 import { MatButtonModule } from '@angular/material/button';
 // Firebase
-import { FirebaseAppModule, initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { } from "@angular/fire";
-import { provideFirestore } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
-import { getFirestore } from '@firebase/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage'
+import { RouterModule } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +43,9 @@ import { getFirestore } from '@firebase/firestore';
     MatButtonModule,
     HttpClientModule, // Allows to make Fetch request
     // firebase
-    FirebaseAppModule,
-    provideFirebaseApp(() => initializeApp({})),
-    provideFirestore(() => getFirestore()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
+    
 
   ],
   exports: [
